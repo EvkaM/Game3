@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #6299dc, #bcbcbc);
+    font-family: Arial;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background:linear-gradient(to left, #0063dc, #505050);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 80%;
+    height: 80%;
+    display: none;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+    background-color: white;
+}
+
+.card.flipped img {
+    display: block;
+}
+
+.score {
+    font-size: 24px;
+    margin: 20px;
+}
